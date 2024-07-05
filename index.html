@@ -5,53 +5,162 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <div class="row-wrap">
-                <div class="logo-wrap">
-                    <span class="logo">LOGO</span>
-                </div>
-                <div class="nav-wrap">
-                    <ul class="nav-list">
-                        <li class="active"><a href="#">Home</a></li>
-                        <li><a href="#">Contact us</a></li>
-                        <!-- <li class="with-submenu">
-                            <a href="#">Blog</a>
-                            <div class="submenu">
-                                <ul class="submenu-inner">
-                                    <li><a href="#">Link1</a></li>
-                                    <li><a href="#">Link2</a></li>
-                                    <li><a href="#">Link3</a></li>
-                                </ul>
-                            </div>
-                        </li> -->
+   
+    <header class="header-section">
+        <div class="header-container">
+            <div class="header-content">
+                <div class="logo-container">LOGO</div>
+                <div class="navbar-container">
+                    <ul class="navbar-list">
+                        <li class="navbar-item">Home</li>
+                        <li class="navbar-item">Contact Us</li>
+                        <li class="navbar-item hamburger" onclick="openNav()">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                              </svg>
+                        </li>
                     </ul>
-                </div>
-                <div class="hamburger">
-                    <span class="line"></span>
-                    <span class="line"></span>
-                    <span class="line"></span>
                 </div>
             </div>
         </div>
+        <div id="myNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+              <a href="#">Home</a>
+              <a href="#">Contact Us</a>
+            </div>
+          </div>
     </header>
 
-    <div class="hero-container">
-        <img src="./src/Group 1716.webp" alt="" />
-    </div>
-    <div class="hero-container">
-        <img src="./src/ott-flyer1.png" alt="" />
-    </div>
-    <div class="hero-container">
-        <img src="./src/ott-flyer2.png" alt="" />
+    <div class="hero-img-section">
+        <img src="./src/Group 1716.webp" alt="hero-img"/>
     </div>
 
+    <h2 class="broadband">Broadband Plans in Bangalore</h2>
 
-    <div class="overlay"></div>
+    <div class="plan-img-section">
+        <img src="./src/plans-scaled.jpg" alt="hero-img"/>
+    </div>
 
+    <!-- <section  class="banner-section">
+        <div class="banner-img-container">
+            <img src="./src/ott-flyer1.png"/>
+            <img src="./src/ott-flyer2.png"/>
+        </div>
+    </section> -->
+
+    <section  class="banner-section">
+        <div class="banner-img-container">
+            <img src="./src/ott-flyer1.png"/>
+            <img src="./src/ott-flyer2.png"/>
+        </div>
+    </section>
+
+
+    <h2 class="broadband">Advantages of Tata Play Fiber</h2>
+
+    <div class="accordion-container">
+        <div class="accordion-content">
+            <button class="accordion">VALUE</button>
+            <div class="panel">
+                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+
+            <button class="accordion">100% FIBER NETWORK</button>
+            <div class="panel">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+
+            <button class="accordion">OFFERS</button>
+            <div class="panel">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="info-container">
+            <div class="info-content">
+                <h3>Broadband In Bengaluru</h3>
+                <p>Step into the future of unlimited broadband plans with Tata Play Fiber. Experience the high-speed internet on our existing fiber broadband connection in Bengaluru across multiple devices.</p>
+            </div>
+        </div>
+        <br/>
+        <br/>
+        <br/>
+        <h4 class="terms-heading">Terms & Conditions</h4>
+        <ul>
+            <li>Month refers to a period of 30 days.</li>
+            <li>For Unlimited Data plans, speed will reduce to 3 Mbps after 3300 GB data consumption</li>
+            <li>Speed mentioned is maximum speed for respective plans.</li>
+            <li>For 1 Gbps plan,&nbsp;speed on WiFi will be 450 Mbps and on LAN 900 Mbps. End device consuming 1 Gbps speed should support 5 GHz band.</li><li>For landline service, instrument needs to be purchased separately.</li><li>300 Mbps &amp; above speed plans are available in select&nbsp;cities &amp; areas and is subject to technical feasibility. Please call contact center to know availability in your area.</li>
+            <li>Any applicable discounts are included in the plan rental.</li><li>100% refundable security deposit&nbsp;of Rs.1000&nbsp;applicable on 1 month and&nbsp;all&nbsp;50 Mbps&nbsp;Unlimited Data&nbsp;plans</li><li>Rs.500 installation charges applicable on monthly plans.</li>
+        </ul>
+    </div>
+
+    <section class="contact-form">
+        <div class="container">
+          <div class="row">
+             <div class="col-lg-6">
+                 <div class="connect-us-form-container dominar-form-contact">
+                     <div class="connect-us-form">
+                         <div class="form-group has-error has-feedback">
+                           <label>Your Name</label>
+                           <input type="text" class="form-control" id="user_name" name="user_name" placeholder="Enter Your Name">
+                           <!-- <span class="form-control-feedback"><i class="glyphicon glyphicon-remove"></i></span> -->
+                         </div>
+                         <!-- <div class="form-group">
+                           <label>Email</label>
+                           <input type="text" class="form-control" id="user_email" name="user_email" placeholder="Enter Your Email">
+                         </div> -->
+                         <div class="form-group">
+                           <label>Phone</label>
+                           <input type="tel" maxlength="10" class="form-control" id="user_phone" name="user_phone" placeholder="Enter Your Mobile Number">
+                         </div>
+                         <div class="form-group">
+                           <label>Message</label>
+                           <textarea placeholder="Enter message here" id="user_message" name="user_message" class="form-control" height="200px"></textarea>
+                         </div>
+                          <button class="btn btn-block cta text-center" onclick="validateForm();">
+                           <span id="spin-off">Submit</span>
+                           <span class="spinner-border text-white" style="display: none;" id="spin-on"></span>
+                         </button>
+                     </div>
+                   </div>
+             </div>
+             <div class="col-lg-6 flex-a-center">
+                 <div class="connect-info-container">
+                     <div class="connect-info">
+                         <!-- <div class="profile-img" style=" border-radius: 100px;">
+                             <img src="img/landing-page.svg">
+                         </div> -->
+                         <div class="let-build">Contact US At:</div>
+                     </div>
+                     <div>
+                        No.180, 8th Main Road
+                        CQAL Layout, Sahakarnagar
+                        Bangalore-560092, KA, INDIA
+                        Phone: 8550818283
+                     </div>
+                 </div>
+             </div>
+         </div>
+        </div>
+     </section>
+    
+   
+     <footer class="site-footer">
+		<div class="site-info">
+			@(C) BOOK NEW FIBER		
+        </div><!-- .site-info -->
+	</footer>
+
+    
+    
+    <script src="dominar.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
