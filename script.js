@@ -84,7 +84,8 @@ function validateForm(){
         {
             name: idval('user_name'), 
             phone:idval('user_phone'), 
-            message: idval('user_message') + 'PINCODE : ' + idval('user_pincode'),
+            message: idval('user_message'),
+            pincode:  idval('user_pincode'),
             time: dateStr
         }
     );
@@ -93,7 +94,7 @@ function validateForm(){
 	}
     document.getElementById('spin-off').style.display = 'none';
     document.getElementById('spin-on').style.display = 'inline-block';
-    fetch('https://script.google.com/macros/s/AKfycbxGs_6o1V2qBH9USNCimrOgmN5k1KGXpyffIXJ4YY2lzmIi0Zfs_WXzXcjiWvspTSiM/exec', {
+    fetch('https://script.google.com/macros/s/AKfycbxIhEU0orVl4y1l-vgH8PEJFAbNo8ZvPkfLBQfoURyzFgCG36N9hqNnsc_WlIgpGUqvCA/exec', {
         method: "POST",
         body: data
     })
@@ -106,7 +107,8 @@ function validateForm(){
         alert(data);
         location.reload();
     })
-    .catch(()=>{
+    .catch((e)=>{
+      console.log(e);
         document.getElementById('spin-off').style.display = 'block';
         document.getElementById('spin-on').style.display = 'none';
     })
