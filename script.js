@@ -46,8 +46,16 @@ var validator = new Dominar(document.querySelector('.dominar-form-contact'), {
 	  rules: 'required|min:10',
 	  triggers: ['focusout', 'change', 'keyup'],
 	  customMessages: {
-		required: 'Please Enter Your Message',
+		required: 'Please Enter Your Landmark',
 		min: 'Please Enter Minimum of :min characters',
+	  }
+	},
+  user_pincode: {
+	  rules: 'required|digits:6',
+	  triggers: ['focusout', 'change', 'keyup'],
+	  customMessages: {
+		required: 'Please Enter Your Pincode',
+		min: 'Please Enter Minimum of :digits number',
 	  }
 	}
 });
@@ -56,13 +64,25 @@ function submitForm(){
 	validator.validateAll(validateForm);
 }
 
+function idval(id){
+  return document.getElementById(id) && document.getElementById(id).value;
+}
+
+function objectToFormData(obj) {
+  const formData = new FormData();
+  Object.entries(obj).forEach(([key, value]) => {
+      formData.append(key, value);
+  });
+  return formData;
+};
+
 function validateForm(){
     let dateStr = new Date().toString();
     let data = objectToFormData(
         {
             name: idval('user_name'), 
             phone:idval('user_phone'), 
-            message: idval('user_message'),
+            message: idval('user_message') + 'PINCODE : ' + idval('user_pincode'),
             time: dateStr
         }
     );
@@ -90,3 +110,19 @@ function validateForm(){
     })
     ;
 };
+
+
+function nameValidation(val){
+  val = val ?  toTitleCase(val)
+  .replace(/\s\s+/g, " ")
+  .replace(/[^a-zA-Z\s]/g, '') : '';
+  return val;
+}
+
+function toTitleCase(str) {
+  if(str){
+    return str.replace(/\w\S*/g, function (txt) {
+      return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+    });
+  }
+}
