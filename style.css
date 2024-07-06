@@ -174,7 +174,7 @@
   }
 
   .contact-form {
-    margin-top: 100px;
+    margin-top: 20px;
     background: #1B0A3E;
     padding: 40px;
     color: white;
@@ -185,11 +185,11 @@
     color: #fff;
   }
 
+  .book-now-align{
+    text-align: center;
+  }
   .book-btn{
-    position: absolute;
-    bottom: 150px;
-    z-index: 3;
-    left: 100px;
+    text-align: center;
     font-size: 20px !important;
     padding: 8px 25px !important;
     text-decoration: none;
@@ -202,10 +202,10 @@
     background: #ddd;
   }
   .let-build{
-    font-size: 24px;
+    font-size: 18px;
   }
   .contact-address{
-    font-size: 20px;
+    font-size: 16px;
   }
   .flex-a-center{
     display: flex;
@@ -248,6 +248,9 @@
   .logo-img{
     width: 60px;
     border-radius: 15px;
+  }
+  .map-img{
+    width: 300px;
   }
   @media screen and (max-width: 768px) {
     .accordion-content{
