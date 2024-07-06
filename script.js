@@ -94,7 +94,7 @@ function validateForm(){
 	}
     document.getElementById('spin-off').style.display = 'none';
     document.getElementById('spin-on').style.display = 'inline-block';
-    fetch('https://script.google.com/macros/s/AKfycbxIhEU0orVl4y1l-vgH8PEJFAbNo8ZvPkfLBQfoURyzFgCG36N9hqNnsc_WlIgpGUqvCA/exec', {
+    fetch('https://script.google.com/macros/s/AKfycbw1e9YN9PdH-Vtf-lHdaIGRvWOba1cQgHnrcqnB2jJOUP10iBhE0PyeuT3uth8Bz21-mw/exec', {
         method: "POST",
         body: data
     })
