@@ -245,9 +245,18 @@
     right: 20px;
     height: 57px;
   }
+  .logo-container{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
   .logo-img{
     width: 60px;
-    border-radius: 15px;
+    /* border-radius: 15px; */
+  }
+  .logo-text{
+    font-size: 22px;
+    margin: 0px;
   }
   .map-img{
     width: 300px;
