@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+   
+    <header class="header-section">
+        <div class="header-container">
+            <div class="header-content">
+                <div class="logo-container">LOGO</div>
+                <div class="navbar-container">
+                    <ul class="navbar-list">
+                        <a href="/"><li class="navbar-item">Home</li></a>
+                        <a href="/contact.html"><li class="navbar-item active">Contact Us</li></a>
+                        <li class="navbar-item hamburger" onclick="openNav()">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                              </svg>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="myNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+              <a href="#">Home</a>
+              <a href="#">Contact Us</a>
+            </div>
+          </div>
+    </header>
+<!-- 
+    <div class="hero-img-section">
+        <img src="./src/Group 1716.webp" alt="hero-img"/>
+    </div>
+
+    <h2 class="broadband">Broadband Plans in Bangalore</h2>
+
+    <div class="plan-img-section">
+        <img src="./src/plans-scaled.jpg" alt="hero-img"/>
+    </div> -->
+
+   
+    <!-- <section  class="banner-section">
+        <div class="banner-img-container">
+            <img src="./src/ott-flyer1.png"/>
+            <img src="./src/ott-flyer2.png"/>
+        </div>
+    </section> -->
+
+
+    <!-- <h2 class="broadband">Advantages of Tata Play Fiber</h2> -->
+
+    <!-- <div class="accordion-container">
+        <div class="accordion-content">
+            <button class="accordion">VALUE</button>
+            <div class="panel">
+                <img src="./src/banner2-1.jpg"/>
+            </div>
+
+            <button class="accordion">100% FIBER NETWORK</button>
+            <div class="panel">
+                <img src="./src/banner1.jpg"/>
+            </div>
+
+            <button class="accordion">OFFERS</button>
+            <div class="panel">
+                <img src="./src/banner3-1.jpg"/>
+                
+            </div>
+        </div>
+    </div> -->
+
+    <div class="container">
+        <!-- <div class="info-container">
+            <div class="info-content">
+                <h3>Broadband In Bengaluru</h3>
+                <p>Step into the future of unlimited broadband plans with Tata Play Fiber. Experience the high-speed internet on our existing fiber broadband connection in Bengaluru across multiple devices.</p>
+            </div>
+        </div> -->
+        <br/>
+        <br/>
+        <br/>
+        <h4 class="terms-heading">Terms & Conditions</h4>
+        <ul>
+            <li>Month refers to a period of 30 days.</li>
+            <li>For Unlimited Data plans, speed will reduce to 3 Mbps after 3300 GB data consumption</li>
+            <li>Speed mentioned is maximum speed for respective plans.</li>
+            <li>For 1 Gbps plan,&nbsp;speed on WiFi will be 450 Mbps and on LAN 900 Mbps. End device consuming 1 Gbps speed should support 5 GHz band.</li><li>For landline service, instrument needs to be purchased separately.</li><li>300 Mbps &amp; above speed plans are available in select&nbsp;cities &amp; areas and is subject to technical feasibility. Please call contact center to know availability in your area.</li>
+            <li>Any applicable discounts are included in the plan rental.</li><li>100% refundable security deposit&nbsp;of Rs.1000&nbsp;applicable on 1 month and&nbsp;all&nbsp;50 Mbps&nbsp;Unlimited Data&nbsp;plans</li><li>Rs.500 installation charges applicable on monthly plans.</li>
+        </ul>
+    </div>
+
+    <section class="contact-form">
+        <div class="container">
+          <div class="row">
+             <div class="col-lg-6">
+                 <div class="connect-us-form-container dominar-form-contact">
+                     <div class="connect-us-form">
+                         <div class="form-group has-error has-feedback">
+                           <label>Your Name</label>
+                           <input type="text" class="form-control" id="user_name" name="user_name" oninput="this.value = nameValidation(this.value)" placeholder="Enter Your Name" onblur="this.value = this.value.trim();">
+                           <!-- <span class="form-control-feedback"><i class="glyphicon glyphicon-remove"></i></span> -->
+                         </div>
+                         <!-- <div class="form-group">
+                           <label>Email</label>
+                           <input type="text" class="form-control" id="user_email" name="user_email" placeholder="Enter Your Email">
+                         </div> -->
+                         <div class="form-group">
+                           <label>Phone</label>
+                           <input type="tel" maxlength="10" class="form-control" id="user_phone" name="user_phone" oninput="this.value = this.value.replace(/[^0-9]+/g, '')" onblur="this.value = this.value.trim();" placeholder="Enter Your Mobile Number">
+                         </div>
+                         <div class="form-group">
+                           <label>Landmark</label>
+                           <textarea placeholder="Enter Your Landmark" id="user_message" name="user_message" class="form-control" height="200px"></textarea>
+                         </div>
+                         <div class="form-group">
+                            <label>Pincode</label>
+                            <input placeholder="Enter Your Pincode here" id="user_pincode" name="user_pincode" oninput="this.value = this.value.replace(/[^0-9]+/g, '')" onblur="this.value = this.value.trim();"  class="form-control" height="200px"/>
+                          </div>
+                          <button class="btn btn-block cta text-center" onclick="validateForm();">
+                           <span id="spin-off">Submit</span>
+                           <span class="spinner-border text-white" style="display: none;" id="spin-on"></span>
+                         </button>
+                     </div>
+                   </div>
+             </div>
+             <div class="col-lg-6 flex-a-center">
+                 <div class="connect-info-container">
+                     <div class="connect-info">
+                         <!-- <div class="profile-img" style=" border-radius: 100px;">
+                             <img src="img/landing-page.svg">
+                         </div> -->
+                         <div class="let-build">Contact US At:</div>
+                     </div>
+                     <br/>
+                     <div class="contact-address">
+                        No 11 6th Main <br/>
+                        bikasipura Isro Layout konankunte cross <br/>
+                        Near Insight academy school <br/>
+                        Bangalore 560078
+                     </div>
+                 </div>
+             </div>
+         </div>
+        </div>
+     </section>
+    
+   
+     <a href="tel:9741708848">
+        <telephone class="tel">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-telephone-outbound-fill" viewBox="0 0 16 16">
+                 <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877zM11 .5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V1.707l-4.146 4.147a.5.5 0 0 1-.708-.708L14.293 1H11.5a.5.5 0 0 1-.5-.5"/>
+               </svg>
+          </telephone>
+     </a>
+     <a href="https://wa.me/9741708848?textHi%20Team%20">
+        <whatsapp class="wa">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+              </svg>
+         </whatsapp>
+     </a>
+     
+     <footer class="site-footer">
+		<div class="site-info">
+			@(C) BOOK NEW FIBER		
+        </div><!-- .site-info -->
+	</footer>
+
+    
+    
+    <script src="dominar.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
