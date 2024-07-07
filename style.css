@@ -203,9 +203,13 @@
   }
   .let-build{
     font-size: 18px;
+    font-weight: 800;
+    color: #1b0a3e;
   }
   .contact-address{
-    font-size: 16px;
+    margin-top: 10px;
+    font-size: 15px;
+    color: #1b0a3e;
   }
   .flex-a-center{
     display: flex;
@@ -255,15 +259,28 @@
     /* border-radius: 15px; */
   }
   .logo-text{
-    font-size: 24px;
+    font-size: 28px;
     margin: 0px;
+    font-weight: 800;
   }
   .map-img{
     width: 300px;
+    border-radius: 5px;
+  }
+  .connect-info-container{
+    display: flex;
+    gap: 10px;
+    background: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    flex-direction: row-reverse;
+    border-radius: 5px;
+    justify-content: space-between;
   }
   @media screen and (max-width: 768px) {
     .logo-text{
-      font-size: 16px;
+      font-size: 20px;
+      font-weight: 800;
       margin: 0px;
     }
     .panel img{
@@ -295,5 +312,11 @@
     }
     .plan-img-section img{
       width: 90vw;
+    }
+    .connect-info-container{
+      flex-direction: column-reverse;
+    }
+    .map-img{
+      width: 100%;
     }
   }
